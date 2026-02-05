@@ -2,6 +2,6 @@
 aiogram==2.25.1
 # Environment variable management
 python-dotenv==1.0.1
-# Async HTTP requests (used internally & useful for APIs)
+# Async HTTP requests 
 aiohttp==3.8.6
 
