@@ -12,7 +12,7 @@ logging.basicConfig(level=logging.INFO)
 
 # Initialize bot and dispatcher
 bot = Bot(token=TELEGRAM_BOT_TOKEN)
-dp = Dispatcher(bot)
+dp = Dispatcher(bot )
 
 
 @dp.message_handler(commands=['start', 'help'])
