@@ -31,7 +31,7 @@ This project is beginner-friendly and perfect for learning:
 
 ---
 
-## 📂 Project Structure
+
 
 ## 📂 Project Structure
 
