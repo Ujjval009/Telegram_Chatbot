@@ -1,4 +1,7 @@
+# Telegram bot framework
 aiogram==2.25.1
-python-dotenv==1.0.0
-Python 3.10.x
+# Environment variable management
+python-dotenv==1.0.1
+# Async HTTP requests (used internally & useful for APIs)
+aiohttp==3.8.6
 

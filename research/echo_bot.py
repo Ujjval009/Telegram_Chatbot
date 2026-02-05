@@ -1,44 +1,37 @@
 import logging
-import asyncio
-from aiogram import Bot, Dispatcher , types ,  executor
-from aiogram.utils import executor
+from aiogram import Bot, Dispatcher, executor, types
 from dotenv import load_dotenv
 import os
-import sys
 
-from llm.mistral import generate_response
-
-# Add the parent directory to sys.path to import main
-sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-
-
-# Load environment variables
 load_dotenv()
-
 TELEGRAM_BOT_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN")
-#print(TELEGRAM_BOT_TOKEN)
+# print(TELEGRAM_BOT_TOKEN)
 
+#configure logging
 logging.basicConfig(level=logging.INFO)
 
 # Initialize bot and dispatcher
 bot = Bot(token=TELEGRAM_BOT_TOKEN)
 dp = Dispatcher(bot)
 
+
 @dp.message_handler(commands=['start', 'help'])
 async def command_start_handler(message: types.Message):
-    await message.answer(
-        f"Hello, {message.from_user.full_name}!\n"
-        "I'm Echo Bot!\n"
-        "Send me any message."
-    )
-    
-@dp.message_handler()
-async def echo_handler(message: types.Message):
-    #this will return echo
-    await message.answer("Thinking... ⏳")
-    reply = generate_response(message.text)
-    await message.answer(reply)
+    """
+    This handler receives messages with `/start` or  `/help `command
+    """
+    await message.reply("Hi\nI am Echo Bot!\nPowered by Ujjval.")
 
-    
+
+
+@dp.message_handler()
+async def echo(message: types.Message):
+    """
+    This will retrun echo
+    """
+    await message.answer(message.text)
+
+
 if __name__ == "__main__":
-    executor.start_polling(dp)
+    executor.start_polling(dp, skip_updates=True)
+
