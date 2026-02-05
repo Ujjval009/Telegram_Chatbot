@@ -38,8 +38,8 @@ Telegram_Chatbot/
 ├── research/
 │ └── echo_bot.py # Main bot logic
 │
-├── .env # Environment variables (bot token)
-├── .gitignore
+├── .env # Environment variables (Bot Token)
+├── .gitignore # Git ignore rules
 ├── main.py # Entry point (optional)
 ├── requirements.txt # Project dependencies
 ├── README.md # Project documentation
