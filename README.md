@@ -33,17 +33,18 @@ This project is beginner-friendly and perfect for learning:
 
 ## 📂 Project Structure
 
+## 📂 Project Structure
+
+```text
 Telegram_Chatbot/
-│
 ├── research/
-│ └── echo_bot.py # Main bot logic
-│
-├── .env # Environment variables (Bot Token)
-├── .gitignore # Git ignore rules
-├── main.py # Entry point (optional)
-├── requirements.txt # Project dependencies
-├── README.md # Project documentation
-└── venv/ # Virtual environment
+│   └── echo_bot.py        # Main bot logic
+├── .env                   # Environment variables (Bot Token)
+├── .gitignore             # Git ignore rules
+├── main.py                # Entry point (optional)
+├── requirements.txt       # Project dependencies
+├── README.md              # Project documentation
+└── venv/                  # Virtual environment
 
 ## 🔐 Environment Setup
 
